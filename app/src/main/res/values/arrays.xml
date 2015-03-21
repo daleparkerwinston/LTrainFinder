@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="l_train_stops">
+        <item>8 Av</item>
+        <item>6 Av</item>
+        <item>Union Sq - 14 St</item>
+        <item>3 Av</item>
+        <item>1 Av</item>
+        <item>Bedford Av</item>
+        <item>Lorimer St</item>
+        <item>Graham Av</item>
+        <item>Grand St</item>
+        <item>Montrose Av</item>
+        <item>Morgan Av</item>
+        <item>Jefferson St</item>
+        <item>DeKalb Av</item>
+        <item>Myrtle - Wyckoff Avs</item>
+        <item>Halsey St</item>
+        <item>Wilson Av</item>
+        <item>Bushwick Av - Aberdeen St</item>
+        <item>Broadway Jct</item>
+        <item>Atlantic Av</item>
+        <item>Sutter Av</item>
+        <item>Livonia Av</item>
+        <item>New Lots Av</item>
+        <item>E 105 St</item>
+        <item>Canarsie - Rockaway Pkwy</item>
+    </string-array>
+</resources>
