@@ -66,6 +66,8 @@ public class MainActivity extends ActionBarActivity implements AdapterView.OnIte
             e.printStackTrace();
         }
 
+        //todo: test this todo!!
+        //todo: tehn make new to do lists
         String trainTimes = "";
 
         textViewDisclaimer.setTextColor(Color.RED);
