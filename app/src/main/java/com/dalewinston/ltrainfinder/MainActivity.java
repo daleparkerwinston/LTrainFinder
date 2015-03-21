@@ -1,5 +1,6 @@
 package com.dalewinston.ltrainfinder;
 
+import android.graphics.Color;
 import android.os.StrictMode;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -18,6 +19,7 @@ public class MainActivity extends ActionBarActivity implements AdapterView.OnIte
 
     private Spinner spinner;
     private TextView textViewResults;
+    private TextView textViewDisclaimer;
 
     private static String url = "http://datamine.mta.info/mta_esi.php?key=1c90c74dbc055d891ad78889c285cec6&feed_id=2";
 
@@ -37,6 +39,7 @@ public class MainActivity extends ActionBarActivity implements AdapterView.OnIte
         spinner = (Spinner) findViewById(R.id.spinner);
         spinner.setOnItemSelectedListener(this);
         textViewResults = (TextView) findViewById(R.id.textView_results);
+        textViewDisclaimer = (TextView) findViewById(R.id.textView_disclaimer);
 
     }
 
@@ -52,9 +55,8 @@ public class MainActivity extends ActionBarActivity implements AdapterView.OnIte
 
         //Get Text from gtfs app!
         String stop = "L11N"; // the stop from the spinner
-        System.out.println(stop);
 
-        ArrayList<String> times = new ArrayList<String>();
+        ArrayList<String> times = new ArrayList<>();
 
         try {
             GTFSReader reader = new GTFSReader(url, stop);
@@ -66,8 +68,13 @@ public class MainActivity extends ActionBarActivity implements AdapterView.OnIte
 
         String trainTimes = "";
 
+        textViewDisclaimer.setTextColor(Color.RED);
+        textViewDisclaimer.setTextSize(14);
+        String disclaimer = "*Times are only for Graham Ave heading into Manhattan.";
+        textViewDisclaimer.setText(disclaimer);
+        textViewResults.setTextColor(Color.DKGRAY);
+        textViewResults.setTextSize(18);
         for(int i = 0; i < times.size(); i++) {
-            System.out.println("Test: " + times.get(i));
             trainTimes += "Arrival Time: " + times.get(i) + "\n";
         }
 
